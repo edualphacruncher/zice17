@@ -6,7 +6,7 @@ function [ sFiles, sTasGrid ] = tsgGetPaths()
 %
 % it is recommended to use absolute path
 
-sFiles = ['../GENEVA_Matlab/'];
+sFiles = ['../ZICE17_Matlab/'];
 sTasGrid = ['../tasgrid'];
 
 
