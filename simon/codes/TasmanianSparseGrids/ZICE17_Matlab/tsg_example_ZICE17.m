@@ -1,4 +1,4 @@
-function tsg_example_Geneva16()
+function tsg_example_ZICE17()
 
 close all;
 clear all;
@@ -10,10 +10,10 @@ plot_choice = 1; % 0=make no plots; 1=make plots
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% tsg_example_IMF16()
+% tsg_example_ZICE17()
 %
 % this is example source code on how to call the different functions of TASMANIAN
-% prepared for IMF 07/16
+% prepared for ZICE 01/17
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
