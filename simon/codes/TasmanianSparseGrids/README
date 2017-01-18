@@ -1,0 +1,28 @@
+Changelog:
+
+- WARNING: grids saved with the old version of the library are incompatible with the new version (due to the new and more efficient data structures)
+- overall the new version of the library is faster and uses less memory
+- added a new anisotropic refinement strategy for global grids
+- to achieve this, we have made numerous changes to the interface, see the updated manual
+- fixed several bugs, the library works more smootly now
+- added more sanity checking of the inputs, error messages are more informative now
+
+Notable changes to the interface:
+
+- the depth parameter accross all interfaces in all grid types now counts from zero, i.e., 
+
+Old:  grid.makeGlobalGrid( dim, out, 1, type_level, ... )
+New:  grid.makeGlobalGrid( dim, out, 0, type_level, ... )
+
+Old:  grid.makeLocalPolynomialGrid( dim, out, 5 ... )
+New:  grid.makeLocalPolynomialGrid( dim, out, 4 ... )
+
+- types iexact and qexact are renamed to iptotal and qptotal, when depth is combined with those types the new value remains the same, i.e.,
+
+Old:  grid.makeGlobalGrid( dim, out, 1, type_iexact, ... )
+New:  grid.makeGlobalGrid( dim, out, 1, type_iptotal, ... )
+
+- the points in the R-Leja sequence now start as 1, -1, 0 ...
+
+
+

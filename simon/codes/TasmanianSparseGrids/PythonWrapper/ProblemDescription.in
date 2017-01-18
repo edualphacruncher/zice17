@@ -1,0 +1,99 @@
+#########################################################################################################
+#    Black-box solver definition
+#########################################################################################################
+#Executable Folder: /home/miro/C++/TasmanianSparseGrids/PythonWrapper/
+Model Executable File: /home/miro/C++/TasmanianSparseGrids/PythonWrapper/testModel.py
+Model Input File: /home/miro/C++/TasmanianSparseGrids/PythonWrapper/testInput
+Model Output File: /home/miro/C++/TasmanianSparseGrids/PythonWrapper/testOutput
+
+#########################################################################################################
+#    TASMANIAN system parameters
+#########################################################################################################
+# use full path
+TasGrid executable: /home/miro/C++/TasmanianSparseGrids/tasgrid
+
+# project name, appended to all temporary files (no spaces or speacial characters)
+Project Name: TestProject
+
+#########################################################################################################
+#    All Grids Parameters
+#########################################################################################################
+# Sparse Grid Parameters
+Number of Inputs: 2
+Number of Outputs: 1
+
+# if Basis Function Type is global and Points Type is Gauss-Hermite or Gauss-Laguerre, this is the shift and rate transform of the domain
+# otherwise, lower and upper bound of the domain
+Domain Transform A: -1   -1
+Domain Transform B: 1  1
+
+
+# either local or global
+Basis Function Support: global
+
+#########################################################################################################
+#    Global Grids Parameters (all of this is ignored for local grids)
+#########################################################################################################
+# global support only, disregarded otherwise
+# global functions use Lagrange polynomials only
+# the points can be placed so that associated quadrature rule is optimal w.r.t. certain weight
+Points Type: leja
+
+# alpha is used only by Gauss-Gegenbauer, Gauss-Hermite, Gauss-Laguerre and Gauss-Jacobi points
+#Type parameter Alpha: 1.0
+# bets is used only by Gauss-Jacobi points
+#Type parameter Beta: 1.0
+
+# custom points only, custom file name
+#Custom Points File Name: blah
+
+# global grids only, rules alternative to the level selection
+Smolyak Level: 3
+# a.k.a., slow growth rule that guarantees minimum number of points for integration of polynomials of lower degree
+#Quadrature Exactness: 4
+# a.k.a., slow growth rule that guarantees minimum number of points for interpolation of polynomials of lower degree
+#Interpolation Exactness: 6
+# hyperbolic cross section
+#Hyperbolic Level: 3
+# full tensor grid only, this will create a full rensor grid (as opposed to a sparse grid), indicate the level 
+#Full tensor Level: 1 1
+
+# global grids only, increases or decreases number of points (or polynomial order) in certain directions
+# large weights indicate fewer points, small weights force more points
+# positive integers only
+# Anisotropic Weights:
+
+
+#########################################################################################################
+#    Local Grids Parameters (all of this is ignored for global grids)
+#########################################################################################################
+# local support only, the minimum hierarchical level
+Initial Level: 3
+
+# local support only, disregarded otherwise
+# local functions use only equispaced points
+# local functions can be 'polynomial' or 'polynomial-zero-boundary' or 'wavelet'
+Basis Functions Type: polynomial
+
+
+# local grids only
+# for polynomials, the maximum degree of polynomials used, set to -1 to automatically use the largest degree possible
+# for wavelets, use 1 or 3 to indicate linear or cubic wavelets
+Basis Order: 3
+
+
+#########################################################################################################
+#    Refinement Parameters
+#########################################################################################################
+# toggles refinement on/off by setting it to 'yes' or 'no'
+#Enable Refinement : yes
+
+Tolerance  : 1.E-2
+
+# restricts the maximum number of samples to be taken by the refinement
+# use -1 for no restriction, but use it caution as the refinement process may fail to converge and keep refining indefinitely
+Maximum Samples : 50
+
+# local grids only, classic, family, direction or FDS selection
+#Refinement Type: fds
+
