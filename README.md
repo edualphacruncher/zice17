@@ -11,3 +11,5 @@ Graduate students from all universities are encouraged to apply to ZICE17. All a
 There will be no fee for participating in ZICE17. We will provide housing for participants at no charge (double rooms at Zurich Youth Hostel). Participants are responsible for transportation costs and for their meals. ZICE17 is funded by the University of Zurich.
 
 For more information on topics, speakers, life in Zurich, and application procedures, see www.zccfe.uzh.ch.
+
+Program: http://www.zccfe.uzh.ch/en/zice17/program.html
