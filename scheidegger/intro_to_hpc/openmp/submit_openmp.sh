@@ -11,7 +11,7 @@
 #SBATCH --output=openmp_test.out
 #SBATCH --error=openmp_test.err
 
-export OMP_NUM_THREADS=4
+export OMP_NUM_THREADS=8
 
 
 ### openmp executable
